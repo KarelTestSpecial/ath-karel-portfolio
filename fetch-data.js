@@ -39,7 +39,18 @@ async function sync() {
         process.exit(1);
     }
 
-    for (const [name, url] of Object.entries(sources)) {
+    for (const [name, config] of Object.entries(sources)) {
+        // Support voor zowel string (legacy) als object (hybrid config)
+        let url = config;
+        if (typeof config === 'object' && config !== null) {
+            if (config.exportUrl) {
+                url = config.exportUrl;
+            } else {
+                console.warn(`  ⚠️ Configuratie voor '${name}' is een object, maar mist 'exportUrl'. Sla over.`);
+                continue;
+            }
+        }
+
         if (!url || !url.startsWith('http')) continue;
         
         try {

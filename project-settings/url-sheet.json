@@ -1,3 +1,6 @@
 {
-  "basisgegevens": "https://docs.google.com/spreadsheets/d/1rswVtY3PqvrtGjTA9OxkYY-ibyhZbhQ3ZF9JO7it3uM/edit?gid=0#gid=0"
+  "basisgegevens": {
+    "editUrl": "https://docs.google.com/spreadsheets/d/1rswVtY3PqvrtGjTA9OxkYY-ibyhZbhQ3ZF9JO7it3uM/edit?gid=0#gid=0",
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1rswVtY3PqvrtGjTA9OxkYY-ibyhZbhQ3ZF9JO7it3uM/pub?output=tsv"
+  }
 }
