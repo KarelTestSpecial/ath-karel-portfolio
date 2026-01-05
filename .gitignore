@@ -10,8 +10,8 @@ dist-ssr/
 .env
 .env.*
 
-# Local Data (optioneel, omdat we fetch gebruiken in CI/CD)
-src/data/*.json
+# Local Data
+# src/data/*.json (Enable this if fetching dynamically, but for static build we need these)
 !src/data/schema.json
 
 # Systeem & Editor
