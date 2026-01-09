@@ -4,6 +4,13 @@ import EditableImage from './EditableImage';
 const ProjectModal = ({ project, onClose, onInquire }) => {
   if (!project) return null;
 
+  // Helper voor slimme URL afhandeling
+  const getImageUrl = (url) => {
+    if (!url) return "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop";
+    if (url.startsWith('http')) return url;
+    return `${import.meta.env.BASE_URL}images/${url}`;
+  };
+
   return (
     <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4 md:p-10">
       {/* Backdrop */}
@@ -28,7 +35,7 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
           {/* Image / Visual Column */}
           <div className="flex-1 bg-slate-900 border-r border-white/5">
             <EditableImage 
-              src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`}
+              src={getImageUrl(project.image_url)}
               alt={project.title || project.name}
               className="w-full h-full"
               cmsBind={{

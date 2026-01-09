@@ -12,13 +12,20 @@ const Header = ({ profile = {} }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Helper voor slimme URL afhandeling
+  const getImageUrl = (url) => {
+    if (!url) return "https://via.placeholder.com/100";
+    if (url.startsWith('http')) return url;
+    return `${import.meta.env.BASE_URL}images/${url}`;
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 py-6 ${isScrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-4">
           <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-blue-500/30">
             <EditableImage 
-              src={profile.profile_image || 'https://via.placeholder.com/100'} 
+              src={getImageUrl(profile.profile_image)} 
               alt={profile.full_name}
               className="w-full h-full"
               cmsBind={{
