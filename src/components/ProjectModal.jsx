@@ -32,7 +32,6 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
 
         <div className="flex flex-col lg:flex-row min-h-full">
           
-          {/* Image / Visual Column */}
           <div className="flex-1 bg-slate-900 border-r border-white/5">
             <EditableImage 
               src={getImageUrl(project.image_url)}
@@ -40,7 +39,7 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
               className="w-full h-full"
               cmsBind={{
                 file: 'tabel',
-                index: project.index !== undefined ? project.index : 0, 
+                index: project.absoluteIndex, 
                 key: 'image_url'
               }}
             />

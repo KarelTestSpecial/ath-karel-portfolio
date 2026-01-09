@@ -79,7 +79,7 @@ export default function Projects({ projects = [] }) {
               key={index} 
               className="group relative flex flex-col cursor-pointer animate-reveal"
               style={{ animationDelay: `${index * 150}ms` }}
-              onClick={() => setSelectedProject({ ...project, index })}
+              onClick={() => setSelectedProject(project)}
             >
               {/* Image Container */}
               <div className="aspect-[16/10] overflow-hidden rounded-3xl bg-slate-900 border border-white/5 relative mb-8">
@@ -89,7 +89,7 @@ export default function Projects({ projects = [] }) {
                   className="w-full h-full"
                   cmsBind={{
                     file: 'tabel',
-                    index: index,
+                    index: project.absoluteIndex,
                     key: 'image_url'
                   }}
                 />
