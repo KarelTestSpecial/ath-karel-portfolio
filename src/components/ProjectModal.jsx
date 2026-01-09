@@ -30,10 +30,12 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
             <EditableImage 
               src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`}
               alt={project.title || project.name}
-              className="w-full h-full object-cover min-h-[300px] lg:min-h-[600px]"
-              dataKey="Tabel"
-              id={project.name || project.title}
-              field="image_url"
+              className="w-full h-full"
+              cmsBind={{
+                file: 'tabel',
+                index: project.index !== undefined ? project.index : 0, 
+                key: 'image_url'
+              }}
             />
           </div>
 

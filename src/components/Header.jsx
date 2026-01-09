@@ -20,10 +20,12 @@ const Header = ({ profile = {} }) => {
             <EditableImage 
               src={profile.profile_image || 'https://via.placeholder.com/100'} 
               alt={profile.full_name}
-              className="w-full h-full object-cover"
-              dataKey="Profile"
-              id={profile.full_name}
-              field="profile_image"
+              className="w-full h-full"
+              cmsBind={{
+                file: 'profile',
+                index: 0,
+                key: 'profile_image'
+              }}
             />
           </div>
           <div className="text-2xl font-black tracking-tighter uppercase italic text-white">

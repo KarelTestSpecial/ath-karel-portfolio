@@ -72,17 +72,19 @@ export default function Projects({ projects = [] }) {
               key={index} 
               className="group relative flex flex-col cursor-pointer animate-reveal"
               style={{ animationDelay: `${index * 150}ms` }}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => setSelectedProject({ ...project, index })}
             >
               {/* Image Container */}
               <div className="aspect-[16/10] overflow-hidden rounded-3xl bg-slate-900 border border-white/5 relative mb-8">
                 <EditableImage 
                   src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
                   alt={project.title || project.name}
-                  className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out"
-                  dataKey="Tabel"
-                  id={project.name || project.title}
-                  field="image_url"
+                  className="w-full h-full"
+                  cmsBind={{
+                    file: 'tabel',
+                    index: index,
+                    key: 'image_url'
+                  }}
                 />
                 
                 {/* Overlay on hover */}
