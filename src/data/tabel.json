@@ -1,0 +1,218 @@
+[
+  {
+    "type": "chrome",
+    "name": "New Tab Organizer",
+    "githubLink": "https://github.com/KarelTestSpecial/new-tab-organizer",
+    "liveLink": "https://chromewebstore.google.com/detail/new-tab-organizer/llhggelkoodddbgmnmfplcmchbbkkjpk",
+    "status": "active",
+    "description": "A customizable startpage with your bookmarks and notes."
+  },
+  {
+    "type": "chrome",
+    "name": "Battery Percentage Versie",
+    "githubLink": "https://github.com/KarelTestSpecial/battery-percentage",
+    "liveLink": "https://chromewebstore.google.com/detail/bcknfhofonlfillmlonppglflhgdbeoa",
+    "status": "active",
+    "description": "Displays the battery percentage in digital form on the toolbar or its own floating window, and sends smart notifications."
+  },
+  {
+    "type": "chrome",
+    "name": "Very Practical Clock",
+    "githubLink": "https://github.com/KarelTestSpecial/clock",
+    "liveLink": "https://chromewebstore.google.com/detail/very-practical-clock/ncooonkkjoeikgkbbljefnmhldpgdpdn",
+    "status": "active",
+    "description": "A customizable digital clock that always stays on top"
+  },
+  {
+    "type": "chrome",
+    "name": "Google AI Studio - File Reader",
+    "githubLink": "https://github.com/KarelTestSpecial/aistudioreader",
+    "liveLink": "https://chromewebstore.google.com/detail/google-ai-studio-file-rea/holadmfpcclmpmkdkmcanifihneflfop",
+    "status": "active",
+    "description": "Converts Google AI Studio File into an easy-to-read text file"
+  },
+  {
+    "type": "chrome",
+    "name": "NotebookLM Source Uploader",
+    "githubLink": "https://github.com/KarelTestSpecial/notebooklm-source-loader",
+    "liveLink": "https://chromewebstore.google.com/detail/notebooklm-source-uploade/cflibmhmbbbnkjhobikinkkabplcijdj",
+    "status": "active",
+    "description": "Automates adding multiple website or YouTube links to Google NotebookLM."
+  },
+  {
+    "type": "chrome",
+    "name": "YouTube Playlist Collector",
+    "githubLink": "https://github.com/KarelTestSpecial/youtube-collector-csv",
+    "liveLink": "https://chromewebstore.google.com/detail/youtube-playlist-collecto/noadbldckkkcfkhghjehpdldgppbggde",
+    "status": "active",
+    "description": "Collects video links from the current YouTube playlist tab and exports them to a downloadable CSV file."
+  },
+  {
+    "type": "chrome",
+    "name": "Youtube Rightclick",
+    "githubLink": "https://github.com/KarelTestSpecial/youtube-rightclick-csv",
+    "liveLink": "https://chromewebstore.google.com/detail/youtube-rightclick/dceebkineaajkfponfimilfebkgbcchh",
+    "status": "active",
+    "description": "Easily add YouTube video URLs to a CSV list via right-click or toolbar button. Quick capture for content curators & researchers."
+  },
+  {
+    "type": "github",
+    "name": "Link-in-bio-Hub",
+    "githubLink": "https://github.com/KarelTestSpecial/link-in-bio-hub-repo",
+    "liveLink": "https://linkinbiohub.web.app",
+    "status": "inactive",
+    "description": "Een met Firebase gebouwde mobile first webapplicatie voor het centraliseren van social media links."
+  },
+  {
+    "type": "github",
+    "name": "YouTube Playlist 2-Way Collector",
+    "githubLink": "https://github.com/KarelTestSpecial/youtube-2way-collector",
+    "liveLink": "",
+    "status": "",
+    "description": "Collect videos from YouTube playlists and save them to a Google Sheet. Edit / Re-arrange your playlists in the Google Sheet and save the changes back to YouTube."
+  },
+  {
+    "type": "github",
+    "name": "YouTube Playlist Collector",
+    "githubLink": "https://github.com/KarelTestSpecial/youtube-collector-sheets",
+    "liveLink": "",
+    "status": "",
+    "description": "Downloads all the video-links of each and everyone of your YouTube playlists into a Google Sheet by the means of the official YouTube/Google API's."
+  },
+  {
+    "type": "github",
+    "name": "URL-pulse",
+    "githubLink": "https://github.com/KarelTestSpecial/url-pulse",
+    "liveLink": "https://kareltestspecial.github.io/url-pulse/",
+    "status": "inactive",
+    "description": "A monitoring tool automated with GitHub Actions that checks the status of URLs and reports on them."
+  },
+  {
+    "type": "github",
+    "name": "Multi File Rename",
+    "githubLink": "https://github.com/KarelTestSpecial/Gdrive-FileRename",
+    "liveLink": "",
+    "status": "",
+    "description": "Rename multiple files in your Google Drive at once. Two main functionalities: removing prefixes from filenames and renaming multiple files in a sequential order."
+  },
+  {
+    "type": "github",
+    "name": "DocLog One",
+    "githubLink": "https://github.com/KarelTestSpecial/Gmail-doclog-one",
+    "liveLink": "",
+    "status": "",
+    "description": "Gmail DocLog One is a Google Workspace add-on for Gmail that helps you automatically log information about email attachments and links into a Google Sheet."
+  },
+  {
+    "type": "github",
+    "name": "OCR combi",
+    "githubLink": "https://github.com/KarelTestSpecial/ocr-combi-addon",
+    "liveLink": "",
+    "status": "",
+    "description": "A Google Workspace Add-on for Google Drive that streamlines the process of text recognition (OCR) and document merging."
+  },
+  {
+    "type": "github",
+    "name": "Linux Partitie Analyser",
+    "githubLink": "https://github.com/KarelTestSpecial/linuxanalyser",
+    "liveLink": "",
+    "status": "",
+    "description": "Analyseert de Crostini Linux-omgeving op een Chromebook. Inventariseert handmatig geïnstalleerde Debian-pakketten, node_modules-mappen en de home-directory. De Google Gemini API genereert intelligente inzichten, samenvattingen en gepersonaliseerde onderhoudstips."
+  },
+  {
+    "type": "github",
+    "name": "Account Migration",
+    "githubLink": "https://github.com/KarelTestSpecial/accountmigration",
+    "liveLink": "",
+    "status": "",
+    "description": "Deze tool is ontworpen om de volledige inhoud (mappen en bestanden) van het ene Google Drive-account naar het andere te migreren, met behoud van de oorspronkelijke mappenstructuur."
+  },
+  {
+    "type": "github",
+    "name": "Custom Data Tree",
+    "githubLink": "https://github.com/KarelTestSpecial/custom-data-tree/",
+    "liveLink": "https://kareltestspecial.github.io/custom-data-tree/index.html",
+    "status": "inactive",
+    "description": "Build your own datatree."
+  },
+  {
+    "type": "github",
+    "name": "Gmail-to-Markdown",
+    "githubLink": "https://github.com/KarelTestSpecial/Gmail-to-Sheet/tree/feat-gmail-addon-email-to-md",
+    "liveLink": "",
+    "status": "",
+    "description": "This Gmail Add-on allows you to select all emails with a specific label, convert them sequentially into a single Markdown file, and save that file to your Google Drive."
+  },
+  {
+    "type": "github",
+    "name": "Gmail-to-Sheets",
+    "githubLink": "https://github.com/KarelTestSpecial/Gmail-to-Sheet",
+    "liveLink": "",
+    "status": "",
+    "description": "This Gmail Add-on allows you to select emails with a specific label and export key data (sender, date, time, subject, and plain text body) to a new Google Sheet file in your Google Drive."
+  },
+  {
+    "type": "github",
+    "name": "Google Drive Add-ons",
+    "githubLink": "https://github.com/KarelTestSpecial/variaGDriveAddons",
+    "liveLink": "",
+    "status": "",
+    "description": "Map Info Viewer, Footnote Remover"
+  },
+  {
+    "type": "github",
+    "name": "Longevity Food Health data tree",
+    "githubLink": "https://github.com/KarelTestSpecial/LFH/",
+    "liveLink": "https://kareltestspecial.github.io/LFH/index.html",
+    "status": "active",
+    "description": "Een datatree over Longevity, Health & Food."
+  },
+  {
+    "type": "github",
+    "name": "Kanban Pro",
+    "githubLink": "https://github.com/KarelTestSpecial/kanbanpro",
+    "liveLink": "https://kanbanpro-frontend.onrender.com/",
+    "status": "inactive",
+    "description": "Basic showcase van mijn architecturale full-stack vaardigheden. Stack: Java (Spring Boot), React (TypeScript), PostgreSQL & Docker."
+  },
+  {
+    "type": "website",
+    "name": "Vegan BioTech Report",
+    "githubLink": "https://github.com/KarelTestSpecial/Vegan-BioTech-Report",
+    "liveLink": "https://kareltestspecial.github.io/Vegan-BioTech-Report/",
+    "status": "active",
+    "description": "Een geautomatiseerde nieuwsbrief en longread website die met AI data verzamelt en presenteert, draaiend op GitHub Actions."
+  },
+  {
+    "type": "website",
+    "name": "AutiWiki",
+    "githubLink": "",
+    "liveLink": "https://autiwiki.netlify.app/",
+    "status": "active",
+    "description": "Een wiki over autisme."
+  },
+  {
+    "type": "website",
+    "name": "Longevity & Health Optimization",
+    "githubLink": "https://github.com/KarelTestSpecial/manus-lfh",
+    "liveLink": "https://kareltestspecial.github.io/manus-lfh/#/",
+    "status": "active",
+    "description": "L&H door Manus.im (afgewerkt met Gemini 3.0 en Jules 2.0)"
+  },
+  {
+    "type": "website",
+    "name": "Portfolio Vite",
+    "githubLink": "https://github.com/KarelTestSpecial/portfolio-vite-1",
+    "liveLink": "https://kareltestspecial.github.io/portfolio-vite-1/",
+    "status": "active",
+    "description": "Mijn portfolio website gebouwd met Vite."
+  },
+  {
+    "type": "website",
+    "name": "Athena CMS Factory",
+    "githubLink": "",
+    "liveLink": "https://kareltestspecial.github.io/jitske-knipt/",
+    "status": "active",
+    "description": "Mijn athena cms factory software bouwt automatisch sites zoals deze mock-up site"
+  }
+]

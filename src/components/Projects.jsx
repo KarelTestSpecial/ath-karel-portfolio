@@ -10,21 +10,22 @@ export default function Projects({ projects = [] }) {
   if (!projects || projects.length === 0) return null;
 
   // Haal unieke categorieën op
-  const categories = ['All', ...new Set(projects.map(p => p.category || 'Development'))];
+  const categories = ['All', ...new Set(projects.map(p => p.category || p.type || 'Development'))];
 
   // Filter projecten
   const filteredProjects = filter === 'All' 
     ? projects 
-    : projects.filter(p => (p.category || 'Development') === filter);
+    : projects.filter(p => (p.category || p.type || 'Development') === filter);
 
   const handleInquire = (project) => {
     // We hergebruiken het cart systeem voor de offerte-aanvraag
     // We voegen een unieke ID toe op basis van de titel als die er niet is
     const item = {
-      id: project.id || project.title.toLowerCase().replace(/\s+/g, '-'),
-      name: project.title,
+      id: project.id || (project.title || project.name).toLowerCase().replace(/\s+/g, '-'),
+      name: project.title || project.name,
       price: 0, // Geen prijs voor offerte-aanvraag
       image: project.image_url,
+      category: project.category || project.type || 'Development',
       ...project
     };
     addToCart(item);
@@ -76,7 +77,7 @@ export default function Projects({ projects = [] }) {
               <div className="aspect-[16/10] overflow-hidden rounded-3xl bg-slate-900 border border-white/5 relative mb-8">
                 <img 
                   src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`} 
-                  alt={project.title}
+                  alt={project.title || project.name}
                   className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out"
                 />
                 
@@ -91,8 +92,8 @@ export default function Projects({ projects = [] }) {
               {/* Info */}
               <div className="flex justify-between items-start px-2">
                 <div>
-                  <p className="text-blue-500 text-[10px] font-black uppercase tracking-[0.3em] mb-3">{project.category || "Development"}</p>
-                  <h4 className="text-3xl font-black tracking-tight group-hover:text-blue-500 transition-colors text-white">{project.title}</h4>
+                  <p className="text-blue-500 text-[10px] font-black uppercase tracking-[0.3em] mb-3">{project.category || project.type || "Development"}</p>
+                  <h4 className="text-3xl font-black tracking-tight group-hover:text-blue-500 transition-colors text-white">{project.title || project.name}</h4>
                 </div>
                 <div className="text-slate-600 font-medium italic text-lg mt-1">
                   0{index + 1}

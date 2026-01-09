@@ -39,21 +39,21 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
               {project.category || "Development"}
             </p>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-none text-white">
-              {project.title}
+              {project.title || project.name}
             </h2>
             
             <div className="space-y-8 mb-12">
               <div>
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">About the project</h4>
                 <p className="text-slate-300 text-lg leading-relaxed">
-                  {project.description || project.summary}
+                  {project.description || project.summary || "No description available."}
                 </p>
               </div>
 
               <div>
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Technologies</h4>
                 <div className="flex flex-wrap gap-2">
-                  {(project.tech_stack || "").split(',').map((tech, i) => (
+                  {(project.tech_stack || project.type || "Web App").split(',').map((tech, i) => (
                     <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                       {tech.trim()}
                     </span>
@@ -64,9 +64,9 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
 
             {/* Links Section */}
             <div className="flex flex-wrap gap-6 pt-10 border-t border-white/5">
-              {project.repo_url && (
+              {(project.repo_url || project.githubLink) && (
                 <a 
-                  href={project.repo_url.startsWith('http') ? project.repo_url : `https://${project.repo_url}`}
+                  href={(project.repo_url || project.githubLink).startsWith('http') ? (project.repo_url || project.githubLink) : `https://${(project.repo_url || project.githubLink)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-white text-black font-black uppercase tracking-widest text-xs rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-xl shadow-white/5"
@@ -74,9 +74,9 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
                   View Source Code
                 </a>
               )}
-              {project.demo_url && (
+              {(project.demo_url || project.liveLink) && (
                 <a 
-                  href={project.demo_url.startsWith('http') ? project.demo_url : `https://${project.demo_url}`}
+                  href={(project.demo_url || project.liveLink).startsWith('http') ? (project.demo_url || project.liveLink) : `https://${(project.demo_url || project.liveLink)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 border-2 border-white/10 text-white font-black uppercase tracking-widest text-xs rounded-full hover:bg-white/5 transition-all"
