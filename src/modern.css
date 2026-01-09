@@ -1,69 +1,15 @@
-/* 
-  ATHENA MODERN THEME 
-  Tailwind CSS v4 Configuration & Base Styles
-*/
+/* Athena Modern Theme - Neutral Base */
+@import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
-  --color-brand-primary: #3b82f6; /* Blue 500 */
-  --color-brand-secondary: #1f2937; /* Gray 800 */
-  --color-brand-accent: #f59e0b; /* Amber 500 */
-  
-  /* UI Colors */
-  --color-surface: #ffffff;
-  --color-background: #f9fafb;
-  --color-text-main: #111827;
-  --color-text-muted: #6b7280;
-
-  /* Typography */
-  --font-brand: "Inter", "System UI", sans-serif;
-  --font-serif: "Playfair Display", "Georgia", serif;
-  
-  /* Custom Spacing / Shadows */
-  --shadow-premium: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --radius-premium: 1rem;
+  --color-primary: #3b82f6;
+  --color-secondary: #f1f5f9;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-background text-text-main font-brand;
-  }
-
-  h1, h2, h3, h4 {
-    @apply font-bold tracking-tight;
-  }
-}
-
-@layer components {
-  /* Global Utility Components */
-  .btn-primary {
-    @apply px-6 py-3 bg-brand-primary text-white font-bold rounded-lg 
-           transition-all duration-200 hover:bg-blue-600 hover:shadow-lg 
-           active:scale-95 disabled:opacity-50;
-  }
-
-  .btn-secondary {
-    @apply px-6 py-3 border-2 border-brand-primary text-brand-primary font-bold rounded-lg 
-           transition-all duration-200 hover:bg-brand-primary hover:text-white 
-           active:scale-95;
-  }
-
-  .card-premium {
-    @apply bg-surface rounded-premium shadow-sm border border-gray-100 
-           hover:shadow-premium transition-all duration-300;
-  }
-
-  /* Fade-in animations */
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }

@@ -94,8 +94,15 @@ Zoek op Google naar "Color Picker". Kies een kleur en kopieer de HEX-code (het b
 
 ---
 
-## 4. Afbeeldingen en Iconen
-*   **Foto's:** Plak altijd een **directe link** naar een afbeelding (eindigend op `.jpg`, `.png` of `.webp`).
+## 4. Afbeeldingen Beheren (Nieuw!)
+Met de nieuwe **Athena Media Manager** is het beheren van afbeeldingen een stuk eenvoudiger geworden.
+
+1.  **Open de Media Manager:** Klik in het menu op **🚀 Athena CMS** > **📸 Afbeeldingen Manager**.
+2.  **Uploaden:** Sleep uw foto's in het venster. Ze worden automatisch veilig opgeslagen.
+3.  **Gebruiken:** Kopieer de bestandsnaam (bijvoorbeeld `nieuwe-taart.jpg`) en plak deze in de kolom `afbeelding` of `foto` in uw tabblad.
+
+> **Let op:** U hoeft **geen** ingewikkelde links meer te gebruiken. Alleen de bestandsnaam (bv. `header.jpg`) is voldoende. Het systeem zoekt zelf de juiste afbeelding.
+
 *   **Iconen:** U kunt in de kolom 'Icoon' gewoon een Emoji plakken (✂️, 🥐, 💻) of een woord typen dat past bij uw dienst.
 
 ---

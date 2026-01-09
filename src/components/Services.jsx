@@ -1,27 +1,28 @@
 import React from 'react';
 
-export default function Services({ services }) {
+export default function Services({ services = [] }) {
   if (!services || services.length === 0) return null;
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="services" className="py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">What I Do</h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto rounded"></div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-center text-primary font-black uppercase tracking-[0.4em] text-xs mb-20">My Expertise</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-1px bg-white/10 border border-white/10 rounded-[40px] overflow-hidden">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl font-bold">
-                {/* Simple fallback icon based on first letter if no icon lib is present */}
-                {service.title ? service.title[0] : 'S'}
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+            <div key={index} className="bg-[#050505] p-12 hover:bg-white/5 transition-all duration-500 group">
+              <span className="text-4xl mb-8 block grayscale group-hover:grayscale-0 transition-all">{service.icon || "⚡"}</span>
+              <h3 className="text-2xl font-black mb-4 uppercase tracking-tighter">{service.title}</h3>
+              <p className="text-slate-400 font-medium leading-relaxed mb-8">
                 {service.description}
               </p>
+              <ul className="space-y-3">
+                {(service.tags || "").split(',').map((tag, i) => (
+                  <li key={i} className="text-[10px] font-black uppercase tracking-widest text-slate-600 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full"></span> {tag.trim()}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

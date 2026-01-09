@@ -1,21 +1,21 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import Projects from './components/Projects';
+import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
-function App({ data }) {
-  // Data veilig ophalen (met fallbacks)
-  const profile = data.Profile ? data.Profile[0] : {};
-  const projects = data.Projects || [];
-  const services = data.Services || [];
-  const testimonials = data.Testimonials || [];
-  const socials = data.Socials || [];
+const App = ({ data }) => {
+  if (!data) return <div className="min-h-screen flex items-center justify-center font-black uppercase tracking-[0.5em]">Loading Athena...</div>;
+
+  const profile = data['Profile']?.[0] || data['Basisgegevens']?.[0] || {};
+  const projects = data['Projects'] || data['Portfolio'] || [];
+  const services = data['Services'] || [];
+  const testimonials = data['Testimonials'] || [];
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+    <div className="bg-[#050505] text-white min-h-screen">
       <Header profile={profile} />
       
       <main>
@@ -25,9 +25,9 @@ function App({ data }) {
         <Testimonials testimonials={testimonials} />
       </main>
 
-      <Footer profile={profile} socials={socials} />
+      <Footer profile={profile} />
     </div>
   );
-}
+};
 
 export default App;
