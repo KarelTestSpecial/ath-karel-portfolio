@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { CartProvider } from './components/CartContext'
 
 const dataFiles = import.meta.glob('./data/*.json', { eager: true });
 const siteData = {};
@@ -15,6 +16,8 @@ Object.keys(dataFiles).forEach(path => {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App data={siteData} />
+    <CartProvider>
+      <App data={siteData} />
+    </CartProvider>
   </React.StrictMode>,
 )
