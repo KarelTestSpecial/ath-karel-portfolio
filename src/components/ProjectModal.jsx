@@ -1,4 +1,5 @@
 import React from 'react';
+import EditableImage from './EditableImage';
 
 const ProjectModal = ({ project, onClose, onInquire }) => {
   if (!project) return null;
@@ -26,10 +27,13 @@ const ProjectModal = ({ project, onClose, onInquire }) => {
           
           {/* Image / Visual Column */}
           <div className="flex-1 bg-slate-900 border-r border-white/5">
-            <img 
+            <EditableImage 
               src={project.image_url || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop`}
-              alt={project.title}
+              alt={project.title || project.name}
               className="w-full h-full object-cover min-h-[300px] lg:min-h-[600px]"
+              dataKey="Tabel"
+              id={project.name || project.title}
+              field="image_url"
             />
           </div>
 
