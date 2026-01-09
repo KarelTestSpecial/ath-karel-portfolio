@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from './CartContext';
+import EditableImage from './EditableImage';
 
 const Header = ({ profile = {} }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,9 +15,21 @@ const Header = ({ profile = {} }) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 py-6 ${isScrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent'}`}>
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter uppercase italic text-white">
-          {profile.full_name?.split(' ')[0] || 'Karel'}
-          <span className="text-blue-500">.</span>
+        <div className="flex items-center gap-4">
+          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-blue-500/30">
+            <EditableImage 
+              src={profile.profile_image || 'https://via.placeholder.com/100'} 
+              alt={profile.full_name}
+              className="w-full h-full object-cover"
+              dataKey="Profile"
+              id={profile.full_name}
+              field="profile_image"
+            />
+          </div>
+          <div className="text-2xl font-black tracking-tighter uppercase italic text-white">
+            {profile.full_name?.split(' ')[0] || 'Karel'}
+            <span className="text-blue-500">.</span>
+          </div>
         </div>
         
         <div className="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.3em]">
