@@ -53,7 +53,7 @@ export default function EditableImage({ src, alt, className, cmsBind, ...props }
                 file: cmsBind.file,
                 index: cmsBind.index || 0,
                 key: cmsBind.key,
-                value: uploadData.filename // Gebruik de unieke naam van de server!
+                value: uploadData.filename
             })
         });
 
