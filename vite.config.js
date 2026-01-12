@@ -17,7 +17,7 @@ if (fs.existsSync(pluginPath)) {
 }
 
 export default defineConfig({
-  base: '/karel-portfolio/', 
+  base: '/ath-karel-portfolio/', 
   plugins: [
     react(),
     tailwindcss(),
